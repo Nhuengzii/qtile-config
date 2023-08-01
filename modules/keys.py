@@ -1,8 +1,11 @@
 from libqtile.lazy import lazy
 from libqtile.config import Key
+import os
 
 mod = "mod4"
 terminal = "xfce4-terminal"
+if os.system("which kitty") == 0:
+    terminal = "kitty"
 
 keys = [
     # Switch between windows
@@ -15,7 +18,7 @@ keys = [
         lazy.layout.next(),
         desc="Move window focus to other window"),
 
-    Key([mod], "r", lazy.spawn("rofi -show combi"), desc="spawn rofi"),
+    Key([mod], "d", lazy.spawn("rofi -show combi"), desc="spawn rofi"),
 
     # Move windows between left/right columns or move up/down in current stack.
     # Moving out of range in Columns layout will create new column.
@@ -57,7 +60,7 @@ keys = [
 
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
-    Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
+    Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "shift", "control"], "h", lazy.layout.swap_column_left()),
     Key([mod, "shift", "control"], "l", lazy.layout.swap_column_right()),
     Key([mod, "shift"], "space", lazy.layout.flip()),
