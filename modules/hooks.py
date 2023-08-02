@@ -6,3 +6,8 @@ import os
 def autostart():
     home = os.path.expanduser('~/.config/qtile/autostart.sh')
     subprocess.call([home])
+
+@hook.subscribe.startup
+def reload():
+    home = os.path.expanduser("~/.config/qtile/scripts/startup.sh") 
+    subprocess.call([home])
