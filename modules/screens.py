@@ -26,6 +26,10 @@ screens = [
                 widget.Prompt(),
                 widget.Spacer(length=5),
                 widget.WindowName(foreground='#99c0de',fmt='{}'),
+                widget.BatteryIcon(
+                    background="#2f343f",
+                    update_interval=5,
+                ),
                 widget.Chord(
                     chords_colors={
                         'launch': ("#ff0000", "#ffffff"),
