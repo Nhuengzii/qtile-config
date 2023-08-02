@@ -163,7 +163,7 @@ screens = [
                 )
                 
             ],
-            30,  # height in px
+            22,  # height in px
             background="#404552"  # background color
         ), ),
 ]
