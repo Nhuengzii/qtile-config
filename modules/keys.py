@@ -72,7 +72,7 @@ keys = [
         "r",
         lazy.spawncmd(),
         desc="Spawn a command using a prompt widget"),
-    Key([], "XF86AudioRaiseVolume",lazy.spawn("amixer set Master 3%+")),
-    Key([], "XF86AudioLowerVolume",lazy.spawn("amixer set Master 3%-")),
-    Key([], "XF86AudioMute",lazy.spawn("amixer set Master toggle")),
+    Key([], "XF86AudioRaiseVolume",lazy.spawn("sh /home/nhuengzii/.config/qtile/scripts/volume_indicator.sh up")),
+    Key([], "XF86AudioLowerVolume",lazy.spawn("sh /home/nhuengzii/.config/qtile/scripts/volume_indicator.sh down")),
+    Key([], "XF86AudioMute",lazy.spawn("sh /home/nhuengzii/.config/qtile/scripts/volume_indicator.sh mute")),
 ]
