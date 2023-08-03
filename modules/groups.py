@@ -1,8 +1,9 @@
-from libqtile.config import Key, Group
+from libqtile.config import Key, Group, Match
 from libqtile.command import lazy
 from .keys import keys, mod
 
-groups = [Group(i) for i in "123456789"]
+groups = [Group(i) for i in "123456"]
+groups.append(Group("7", matches=[Match(wm_class=["discord"])]))
 
 for i in groups:
     keys.extend([
