@@ -75,4 +75,6 @@ keys = [
     Key([], "XF86AudioRaiseVolume",lazy.spawn("sh /home/nhuengzii/.config/qtile/scripts/volume_indicator.sh up")),
     Key([], "XF86AudioLowerVolume",lazy.spawn("sh /home/nhuengzii/.config/qtile/scripts/volume_indicator.sh down")),
     Key([], "XF86AudioMute",lazy.spawn("sh /home/nhuengzii/.config/qtile/scripts/volume_indicator.sh mute")),
+    Key(["shift"], "Print", lazy.spawn("xfce4-screenshooter -c -r")),
+    Key([], "Print", lazy.spawn("xfce4-screenshooter"))
 ]
