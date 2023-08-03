@@ -61,7 +61,9 @@ keys = [
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
 
     # Toggle between different layouts as defined below
-    Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
+    Key([mod], "c", lazy.next_layout(), desc="Toggle between layouts"),
+    Key([mod], "e", lazy.screen.next_group(), desc="Focus next group"),
+    Key([mod], "Tab", lazy.screen.prev_group(), desc="Focus previous group"),
     Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "shift", "control"], "h", lazy.layout.swap_column_left()),
     Key([mod, "shift", "control"], "l", lazy.layout.swap_column_right()),

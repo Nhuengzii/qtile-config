@@ -29,3 +29,6 @@ for i in groups:
         # Key([mod, "shift"], i.name, lazy.window.togroup(i.name),
         #     desc="move focused window to group {}".format(i.name)),
     ])
+keys.append(
+    Key([mod, "shift"], "d", lazy.group["7"].toscreen(), desc="Switch to group 7")
+)
