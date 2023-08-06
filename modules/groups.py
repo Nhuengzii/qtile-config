@@ -1,4 +1,4 @@
-from libqtile.config import Key, Group, Match
+from libqtile.config import DropDown, Key, Group, Match, ScratchPad
 from libqtile.command import lazy
 from .keys import keys, mod
 
@@ -32,3 +32,11 @@ for i in groups:
 keys.append(
     Key([mod, "shift"], "d", lazy.group["7"].toscreen(), desc="Switch to group 7")
 )
+groups.append(ScratchPad("scratchpad", [
+    DropDown("yt-music", "youtube-music", opacity=1, width=0.5, height=0.5, x=0.25, on_focus_lost_hide=False),
+    DropDown("term", "kitty", opacity=0.8),
+]))
+keys.extend([
+    Key([mod], "m", lazy.group["scratchpad"].dropdown_toggle("yt-music"), desc="Toggle yt-music"),
+    Key([mod, "shift"], "Return", lazy.group["scratchpad"].dropdown_toggle("term"), desc="Toggle terminal"),
+])
