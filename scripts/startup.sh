@@ -1,4 +1,4 @@
 #!/bin/sh
 WALLPAPER="astolfo1.png"
-feh --bg-scale "/home/nhuengzii/.config/qtile/wallpapers/$WALLPAPER"
+feh --recursive --randomize --bg-fill ~/.config/qtile/wallpapers
 setxkbmap -option grp:switch,grp:alt_shift_toggle,grp_led:­scroll us,th

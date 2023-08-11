@@ -13,3 +13,5 @@ eos-welcome & disown
 nm-applet & disown # start network manager applet
 
 discord & disown # start discord
+
+xfce4-clipman & disown # stop xfce4-clipman
