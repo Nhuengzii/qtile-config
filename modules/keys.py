@@ -77,6 +77,8 @@ keys = [
     Key([], "XF86AudioRaiseVolume",lazy.spawn("sh /home/nhuengzii/.config/qtile/scripts/volume_indicator.sh up")),
     Key([], "XF86AudioLowerVolume",lazy.spawn("sh /home/nhuengzii/.config/qtile/scripts/volume_indicator.sh down")),
     Key([], "XF86AudioMute",lazy.spawn("sh /home/nhuengzii/.config/qtile/scripts/volume_indicator.sh mute")),
+    Key([], "XF86MonBrightnessUp",lazy.spawn("sh /home/nhuengzii/.config/qtile/scripts/brightness.sh up")),
+    Key([], "XF86MonBrightnessDown",lazy.spawn("sh /home/nhuengzii/.config/qtile/scripts/brightness.sh down")),
     Key(["shift"], "Print", lazy.spawn("flameshot gui")),
     Key([], "Print", lazy.spawn("flameshot gui"))
 ]
