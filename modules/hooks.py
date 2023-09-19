@@ -13,8 +13,8 @@ def reload():
     home = os.path.expanduser("~/.config/qtile/scripts/startup.sh") 
     subprocess.call([home])
 
-@hook.subscribe.focus_change
-def change_group():
-    # change background
-    command = "feh --recursive --randomize --bg-fill ~/.config/qtile/wallpapers"
-    subprocess.call([command], shell=True)
+# @hook.subscribe.focus_change
+# def change_group():
+#     # change background
+#     command = "feh --recursive --randomize --bg-fill ~/.config/qtile/wallpapers"
+#     subprocess.call([command], shell=True)
