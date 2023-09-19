@@ -5,4 +5,4 @@ sh ~/.config/qtile/dotfiles/setups/docker.sh
 sh ~/.config/qtile/dotfiles/setups/symlink.sh
 sh ~/.config/qtile/dotfiles/setups/default_browser.sh
 sh ~/.config/qtile/dotfiles/setups/zsh.sh
-Sh ~/.config/qtile/dotfiles/setups/neovim/astronvim.sh
+sh ~/.config/qtile/dotfiles/setups/neovim/astronvim.sh
