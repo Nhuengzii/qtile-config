@@ -33,10 +33,18 @@ keys.append(
     Key([mod, "shift"], "d", lazy.group["7"].toscreen(), desc="Switch to group 7")
 )
 groups.append(ScratchPad("scratchpad", [
-    DropDown("yt-music", "youtube-music", opacity=1, width=0.5, height=0.5, x=0.25, on_focus_lost_hide=False),
-    DropDown("term", "kitty", opacity=0.8),
+    DropDown("term", "kitty -e tmux", opacity=0.8,
+             height=0.8, width=0.8, x=0.1, y=0.1),
+    DropDown("slack", "slack", match=Match(wm_class="slack"), opacity=1,
+             height=0.8, width=0.8, x=0.1, y=0.1),
+    DropDown("microsoft-edge-stable", "microsoft-edge-stable", match=Match(wm_class="microsoft-edge"), opacity=1,
+             height=0.8, width=0.8, x=0.1, y=0.1),
 ]))
 keys.extend([
-    Key([mod], "m", lazy.group["scratchpad"].dropdown_toggle("yt-music"), desc="Toggle yt-music"),
-    Key([mod, "shift"], "Return", lazy.group["scratchpad"].dropdown_toggle("term"), desc="Toggle terminal"),
+    Key([mod, "shift"], "Return", lazy.group["scratchpad"].dropdown_toggle(
+        "term"), desc="Toggle terminal"),
+    Key([mod, "shift"], "s", lazy.group["scratchpad"].dropdown_toggle(
+        "slack"), desc="Toggle slack"),
+    Key([mod, "shift"], "w", lazy.group["scratchpad"].dropdown_toggle(
+        "microsoft-edge-stable"), desc="Toggle microsoft-edge-stable"),
 ])
